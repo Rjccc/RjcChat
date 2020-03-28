@@ -2,6 +2,7 @@
 #define SERVER_H
 
 #include <QObject>
+#include <QTcpServer>
 
 class Server : public QObject
 {
@@ -11,6 +12,8 @@ public:
 
 signals:
 
+private:
+    QTcpServer* tcpServer;
 };
 
 #endif // SERVER_H
