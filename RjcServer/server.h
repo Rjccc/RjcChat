@@ -3,17 +3,23 @@
 
 #include <QObject>
 #include <QTcpServer>
+#include <QTcpSocket>
 
-class Server : public QObject
+#define SERVER_IP   "localhost"
+#define SERVER_PORT 4040
+
+class server : public QObject
 {
     Q_OBJECT
 public:
-    explicit Server(QObject *parent = nullptr);
+    explicit server(QObject *parent = nullptr);
 
 signals:
 
 private:
-    QTcpServer* tcpServer;
+    QTcpServer *tcpServer;
+
+    bool startServer();
 };
 
 #endif // SERVER_H

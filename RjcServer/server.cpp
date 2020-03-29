@@ -1,6 +1,10 @@
 #include "server.h"
 
-Server::Server(QObject *parent) : QObject(parent)
+server::server(QObject *parent) : QObject(parent)
 {
+    tcpServer = new QTcpServer;
+}
+
+bool server::startServer(){
 
 }
